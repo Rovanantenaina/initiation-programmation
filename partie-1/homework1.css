@@ -1,0 +1,64 @@
+#bdp1 {
+    text-align: center;
+}
+
+#bdp2 {
+    text-align: center;
+}
+
+#bdp3 {
+    text-align: center;
+}
+
+#bdp4 {
+    text-align: center;
+}
+
+#bdp5 {
+    text-align: center;
+}
+
+#titre1 {
+    color: #004f00;
+}
+
+#titre2 {
+    color: #0a9746;
+}
+
+#titre3 {
+    color: #0a9746;
+}
+
+#titre4 {
+    color: #004f00;
+}
+
+#liste {
+    background-color: #a8a8a8;
+}
+
+#liste2 {
+    background-color: #a8a8a8;
+}
+
+#text10 {
+    color: #0000cc;
+    text-decoration: #0000cc underline;
+}
+
+#titre5 {
+    color: #0a9746;
+}
+
+#p-exemple-1 {
+    padding-left: 40px;
+    background: darkgray;
+    font-style: italic;
+}
+
+#liste2 {
+    padding-left: 40px;
+    background: darkgray;
+    font-style: italic;
+}
