@@ -51,13 +51,7 @@
     color: #0a9746;
 }
 
-#p-exemple-1 {
-    padding-left: 40px;
-    background: darkgray;
-    font-style: italic;
-}
-
-#liste2 {
+.p-exemple {
     padding-left: 40px;
     background: darkgray;
     font-style: italic;
