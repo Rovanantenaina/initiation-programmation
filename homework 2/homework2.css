@@ -1,0 +1,29 @@
+#main {
+    border: black solid 1px;
+    height: 700px
+}
+#header {
+    border: black solid 1px;
+    height: 100px;
+}
+#section {
+    border: black solid 1px;
+    height: 500px;
+    background-image: url("../image/fond.jpg");
+}
+#footer {
+    border: black solid 1px;
+    height: 98px;
+    text-align: center;
+}
+#menu {
+    border: black solid 1px;
+    width: 25%;
+    height: 500px;
+}
+#titre {
+    text-align: center;
+}
+#image {
+
+}
