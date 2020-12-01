@@ -1,0 +1,32 @@
+#liste-produits {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+#liste-produits td {
+    border: black 1px solid;
+    padding: 10px;
+}
+
+#liste-produits thead {
+    background-color: burlywood;
+}
+
+#liste-produits #test-tr td {
+    color: #004f00;
+}
+#liste-des-voyageurs {
+    border-collapse: separate;
+    width: 75%;
+}
+#entête {
+    border: black;
+    background-color: #a8a8a8;
+    padding: 10px;
+}
+#liste-des-voyageurs td {
+    border: black 1px solid;
+}
+#entête {
+    font-style: italic;
+}
