@@ -1,3 +1,18 @@
 .menu {
     list-style-type: none;
+    font-size: large;
+    background-color: cornflowerblue;
+    width: 160px;
+    padding-bottom: 100%;
+}
+
+a {
+    color: black;
+}
+a {
+    list-style-type: none;
+    font-size: large;
+    background-color: cornflowerblue;
+    width: 160px;
+    padding-bottom: 100%;
 }
