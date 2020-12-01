@@ -1,0 +1,17 @@
+#principal {
+    border: brown double 1px;
+    height: 40px ;
+}
+#back {
+    border: aqua groove 1px;
+    margin: 10px;
+    width: 45%;
+    float: left;
+}
+#forward {
+    border: #0000cc double 1px;
+    margin: 10px;
+    width: 45%;
+    float: left;
+    text-align: right;
+}

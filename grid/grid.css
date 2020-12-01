@@ -1,0 +1,42 @@
+
+#main {
+    border: black 1px solid;
+    height: 730px;
+}
+
+#header {
+    border: #0000cc 1px solid;
+    height: 100px;
+    margin: 5px;
+}
+
+#footer {
+    border: #0a9746 1px solid;
+    height: 100px;
+    margin: 5px;
+}
+
+#section {
+    border: brown 1px solid;
+    height: 500px;
+    margin: 5px;
+}
+
+
+
+#menu {
+    border: tomato 1px dashed;
+    margin: 5px;
+    width: 25%;
+    height: 100px;
+    float: left;
+}
+
+#contenue {
+    border: blueviolet 1px dashed;
+    margin: 5px;
+    width: 75%;
+    height: 200px;
+    float: left;
+}
+
