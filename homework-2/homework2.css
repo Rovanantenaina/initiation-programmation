@@ -1,29 +1,48 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 #main {
     border: black solid 1px;
-    height: 700px
 }
+
 #header {
     border: black solid 1px;
-    height: 100px;
 }
+
 #section {
     border: black solid 1px;
     height: 500px;
-    background-image: url("../image/fond.jpg");
 }
+
 #footer {
     border: black solid 1px;
-    height: 98px;
     text-align: center;
 }
+
 #menu {
     border: black solid 1px;
-    width: 25%;
+    width: 20%;
     height: 500px;
+    float: left;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 5%;
 }
+
 #titre {
     text-align: center;
 }
+
 #image {
+    background-position: center;
+    width: 80%;
+    height: 500px;
+    float: left;
+
 
 }
