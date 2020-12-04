@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>homework formulaire</title>
+    <link rel="stylesheet" href="homework-formulaire.css">
+</head>
+<body>
+<div id="main">
+    <label for="Type">Type :</label>
+    <select id="Type">
+        <option>Bouton</option>
+        <option>Text</option>
+    </select>
+
+    <br/>
+    <div id="section1">
+        <div id="header">
+            <label for="Nom">Nom :</label>
+            <input type="text" id="Nom"><br/>
+            <label for="Infobulle">Infobulle :</label>
+            <input type="text" id="Infobulle">
+        </div>
+
+        <button>Aspect</button>
+        <button>Options</button>
+        <button>Action</button>
+        <button>Format</button>
+        <button>Valider</button>
+        <button>Calculer</button>
+        <div id="section2">
+            <label for="liste">Police à utiliser pour le format PDF 1.3 :</label>
+            <select id="liste">
+                <option>Helvetica</option>
+                <option>Italic</option>
+            </select>
+        </div>
+        <div id="section3">
+            <div>
+                <label for="couleur">Couleur :</label>
+                <select id="couleur" class="section-3-select">
+                    <option>Black</option>
+                    <option>Red</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Largeur">Largeur :</label>
+                <select id="Largeur" class="section-3-select">
+                    <option>Mince</option>
+                    <option>Tall</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="style-x">Style :</label>
+                <select id="style-x" class="section-3-select">
+                    <option>Plein</option>
+                    <option>Réduit</option>
+                </select>
+            </div>
+        </div>
+        <div id="section4">
+            <input type="checkbox" id="Lecture">
+            <label for="Lecture">Lecture seule</label><br/>
+            <input type="checkbox" id="Nécessaire">
+            <label for="Nécessaire">Nécessaire</label><br/>
+            <input type="checkbox" id="Ne">
+            <label for="Ne">Ne pas exporter la valeur</label>
+            <br/>
+            <label for="Visibilité">Visibilité</label>
+            <select id="Visibilité">
+                <option>Visible</option>
+                <option>Invisible</option>
+            </select>
+        </div>
+    </div>
+    <div id="footer">
+        <button>OK</button>
+        <button>Annuler</button>
+    </div>
+
+</div>
+
+</body>
+</html>
