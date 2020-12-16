@@ -1,0 +1,18 @@
+#main1 {
+    border: solid;
+    width: 25%;
+    height: 550px;
+    float: left;
+}
+#main3 {
+    border: solid;
+    width: 22%;
+    height: 550px;
+    float: left;
+}
+#main2 {
+    border: solid;
+    width: 50%;
+    height: 550px;
+    float: left;
+}
