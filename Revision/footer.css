@@ -1,0 +1,32 @@
+
+#contenue {
+    background: black;
+    color: white;
+}
+
+.colonne {
+    float: left;
+    width: 49%;
+}
+
+.clear {
+    clear: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.inline-colonne {
+    border: #0000cc solid 1px;
+    display: inline-block;
+    width: 50%;
+}
