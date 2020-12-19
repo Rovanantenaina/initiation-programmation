@@ -1,0 +1,62 @@
+.bouton1 {
+    float: left;
+}
+.bouton2 {
+    float: left;
+    height: 50px;
+}
+#haut {
+    margin-left: 60%;
+}
+.bottom {
+    text-align: center;
+}
+#header1 {
+    height: 280px;
+}
+#header2 {
+    height: 50px;
+    background: darkgray;
+}
+#header2-1 {
+    margin-left: 40%;
+}
+#content1 {
+    text-align: center;
+}
+#titre1 {
+    font-size: xx-large;
+}
+#profil {
+    height: 100px;
+}
+.corps {
+    margin-left: 10%;
+    margin-right: 10%;
+    border: outset;
+    background: whitesmoke;
+}
+.corps1 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.gris {
+    background: darkgray;
+}
+#tableau {
+    border-collapse: collapse;
+}
+#colonne {
+    background: lavender;
+}
+#footercontent {
+    border: outset;
+    border-color: red;
+    margin-left: 30%;
+    margin-right: 40%;
+}
+.rouge {
+    float: left;
+    border: outset;
+    border-color: red;
+}
