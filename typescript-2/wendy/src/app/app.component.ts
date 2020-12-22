@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {conditionallyCreateMapObjectLiteral} from "@angular/compiler/src/render3/view/util";
+import {createElementCssSelector} from "@angular/compiler";
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,60 @@ import {conditionallyCreateMapObjectLiteral} from "@angular/compiler/src/render3
 export class AppComponent {
 
   constructor() {
-    this.pratiqueConditon()
+    this.homeworkCondition()
   }
+
+  homeworkCondition() {
+    console.log("========Nombre========")
+    let x: number;
+    x : 23;
+
+
+    if (x == 0) {
+      console.log("Le nombre x est pair",);
+    } else {
+      console.log("Le nombre x est impair",);
+    }
+    console.log("=======Météo=======")
+
+    let degre: number;
+    degre = -2;
+
+    if (degre <= -1) {
+      console.log("Il neige",);
+    }
+    if (0 <= degre && degre <= 10) {
+      console.log("Il fait froid",);
+    }
+    if (10 <= degre && degre <= 18) {
+      console.log("Il fait frais",);
+    }
+    console.log("=======Devise========")
+
+    let pays : string;
+    pays = "Madagascar";
+
+    if ( pays = "Madagascar") {
+      console.log("La monaie utiliser est (Ariary)",);
+    }
+    pays = "France";
+
+    if ( pays = "France") {
+      console.log("La monaie utiliser est l'(Euro)");
+    }
+    pays = "USA";
+
+    if (pays = "USA") {
+      console.log("La monaie utiliser est le (dollard)");
+    }
+  }
+
+
+
+
+
+
+
 
   pratiqueConditon() {
     let age: number;
