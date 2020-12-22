@@ -13,6 +13,7 @@
 }
 #header1 {
     height: 280px;
+    background-position: center;
 }
 #header2 {
     height: 50px;
@@ -24,7 +25,7 @@
 #content1 {
     text-align: center;
 }
-#titre1 {
+.grand {
     font-size: xx-large;
 }
 #profil {
@@ -51,12 +52,64 @@
 }
 #footercontent {
     border: outset;
-    border-color: red;
+    border-color: orange;
     margin-left: 30%;
     margin-right: 40%;
 }
 .rouge {
     float: left;
     border: outset;
-    border-color: red;
+    border-color: orange;
+}
+#footer2 {
+    background-color: gainsboro;
+    height: 140px;
+}
+#footer {
+    text-align: center;
+}
+#end {
+    background-color: black;
+    color: white;
+}
+.apivony {
+    text-align: center;
+}
+.partie2 {
+    font-size: larger;
+}
+#police {
+    font-size: x-large;
+}
+#tableau {
+    width: 100%;
+}
+.zero {
+    margin: 0;
+}
+#partager {
+    height: 50px;
+    margin-top: 15px;
+}
+#police {
+    margin-top: 15px;
+}
+#content2 {
+    margin-bottom: 15px;
+}
+#moyen {
+    font-size: x-large;
+}
+#misitaka {
+    margin-top: 10px;
+}
+.farany {
+    float: left;
+    width: 50%;
+}
+#ici {
+    margin-top: 0;
+}
+#decouvrir {
+    margin-bottom: 0;
 }
