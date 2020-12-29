@@ -1,0 +1,35 @@
+<div>
+  <label for="age">Saisir âge : </label>
+  <input type="number" id="age" [(ngModel)]="age">
+</div>
+
+<div>
+  <label for="titre">Saisir titre :</label>
+  <input type="text" id="titre" [(ngModel)]="titre">
+</div>
+
+
+<button (click)="setMajeur()">Vérifier si majeur</button>
+<button (click)="setTitle()">Changer le titre</button>
+<button (click)="ajouterAge()">Ajouter 10ans</button>
+<button (click)="renitialisationAge()">Rénitialiser d'âge</button>
+
+<div>
+  <h3>Résultat</h3>
+  <p>Nom: {{titre}}</p>
+  <p>Âge : {{age}} ans</p>
+  <p>Vous êtes <strong>{{isMajeur}}</strong></p>
+</div>
+
+
+<hr/>
+
+
+<div>
+  <label for="fruit">Fruit : </label>
+  <input type="text" id="fruit" [(ngModel)]="nomFruit">
+</div>
+
+<p>====> {{nomFruit}}</p>
+
+<a href="/super">Allez vers la page super</a>

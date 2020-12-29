@@ -1,0 +1,30 @@
+<div>
+  <h3>Saisi des infos produit</h3>
+  <p>
+    <label for="nom">Désignation : </label>
+    <input type="text" id="nom" [(ngModel)]="nomProduit">
+  </p>
+  <p>
+    <label for="prix-unitaire">Prix unitaire : </label>
+    <input type="number" id="prix-unitaire" [(ngModel)]="prixUnitaire">
+  </p>
+  <p>
+    <label for="tva">TVA : </label>
+    <input type="number" id="tva" [(ngModel)]="tva">
+  </p>
+  <p>
+    <label for="quantite">Quantité : </label>
+    <input type="number" id="quantite" [(ngModel)]="quantite">
+  </p>
+  <p>
+    <button (click)="calculerPrixTTC()">Calculer le prix TTC</button>
+  </p>
+</div>
+
+<div>
+  <h4>Total à payer</h4>
+  <pre>
+    {{prixTTC}} € TTC
+    Bonnus inclus ;)
+  </pre>
+</div>

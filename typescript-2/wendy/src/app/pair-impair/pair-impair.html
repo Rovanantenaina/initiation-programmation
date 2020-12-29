@@ -1,0 +1,13 @@
+<div>
+  <h3>Vérification d'un  nombre pair</h3>
+  <label for="nombre">Saisir un nombre</label>
+  <input type="number" [(ngModel)]="nombre" id="nombre">
+  <div>
+    <button (click)="checkNombre()">Vérifier</button>
+  </div>
+</div>
+
+<div>
+  <h4>Résultat</h4>
+  <p>Le nombre {{nombre}} saisi est {{pair}}</p>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <h2>Vérification d'âge</h2>
+
+  <label for="age">Âge : </label>
+  <input type="number" [(ngModel)]="age" id="age">
+
+</div>
+<div>
+  <button (click)="majeur()">Majeur/Mineur</button>
+</div>
+<div>
+  <span>==>{{verifier}}</span>
+</div>
