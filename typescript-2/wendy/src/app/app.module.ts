@@ -10,6 +10,12 @@ import {Pratique} from "./pratique/pratique";
 import {PairImpair} from "./pair-impair/pair-impair";
 import {FicheProduit} from "./fiche-produit/fiche-produit";
 import {VerificationAge} from "./majeur/majeur";
+import {Multiplication} from "./multiplication/multiplication";
+import {Division} from "./division/division";
+import {Geometrie} from "./geometrie/geometrie";
+import {Moyenne} from "./moyenne/moyenne";
+import {PlusDeux} from "./plus-deux/plus-deux";
+import {LancerBanque} from "./banque/banque";
 
 @NgModule({
   declarations: [
@@ -19,7 +25,13 @@ import {VerificationAge} from "./majeur/majeur";
     Pratique,
     PairImpair,
     FicheProduit,
-    VerificationAge
+    VerificationAge,
+    Multiplication,
+    Division,
+    Geometrie,
+    Moyenne,
+    PlusDeux,
+    LancerBanque
 
   ],
   imports: [

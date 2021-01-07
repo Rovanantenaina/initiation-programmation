@@ -2,16 +2,16 @@ import {Component} from "@angular/core";
 
 @Component({
   selector : "multiplication",
-  templateUrl : "multiplication.htlm"
+  templateUrl : "multiplication.html"
 })
 
-export class Multiplication{
+export class Multiplication {
   public nombre1 : number;
   public nombre2 : number;
-  public total : number;
+  public resultat : number;
 
-  public resultat () : void {
-    this.total = this.nombre1 * this.nombre2;
+  public setResultat () : void {
+    this.resultat = this.nombre1 * this.nombre2;
   }
 
 }

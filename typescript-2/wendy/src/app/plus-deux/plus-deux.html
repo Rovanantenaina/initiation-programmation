@@ -1,0 +1,12 @@
+<div>
+  <h3>Plus Deux</h3>
+  <p>
+    <label for="nombre">Nombre :</label>
+    <input type="number" [(ngModel)]="nombre" id="nombre">
+  </p>
+</div>
+<button (click)="setPlusdeux()">Plus deux</button>
+<button (click)="masquerResultat()" style="margin-left: 10px; border-radius: 5px; background-color: aqua">Masquer</button>
+<div *ngIf="afficherResultat">
+  <p>==> {{plusDeux}}</p>
+</div>

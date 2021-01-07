@@ -2,17 +2,25 @@
   <h2>Multiplication</h2>
 </div>
 <div>
-  <pre>
+  <p>
      <label for="xi">x :</label>
-     <input type="number" [(ngModel)]="" id="xi">
-
-  </pre>
-  <pre>
+     <input type="number" [(ngModel)]="nombre1" id="xi">
+  </p>
+  <p>
     <label for="yi">y :</label>
-    <input type="number" [(ngModel)]="yi" id="yi">
-  </pre>
+    <input type="number" [(ngModel)]="nombre2" id="yi">
+  </p>
 </div>
 <div>
-  <button (click)="">Total</button>
-  <span {{resultat}}></span>
+  <p>
+    <button (click)="setResultat()">Total</button>
+  </p>
+
+  <div>
+
+    <p>
+     ==> {{resultat}}
+    </p>
+  </div>
+
 </div>

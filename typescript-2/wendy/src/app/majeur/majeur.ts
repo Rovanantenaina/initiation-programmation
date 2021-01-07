@@ -6,13 +6,13 @@ import {Component} from "@angular/core";
 })
 export class VerificationAge {
   public age : number;
-  public verifier : string;
+  public majeurMineur : string;
 
   public majeur () : void {
     if (this.age>= 18) {
-      this.verifier = "Majeur"
+      this.majeurMineur = "Majeur"
     } else {
-      this.verifier = "Mineur"
+      this.majeurMineur = "Mineur"
     }
   }
 }

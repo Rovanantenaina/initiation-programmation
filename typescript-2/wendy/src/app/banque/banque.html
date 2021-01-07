@@ -1,0 +1,88 @@
+<div>
+  <h1>Banque-wa</h1>
+  <div *ngIf="afficherCreationDeCompte">
+    <h3>Création d'un compte</h3>
+    <p>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" [(ngModel)]="nom">
+    </p>
+    <p>
+      <label for="prenom">Prénom(s) :</label>
+      <input type="text" id="prenom" [(ngModel)]="prenom">
+    </p>
+    <p>
+      <label for="dateDeNaissance">Date de naissance :</label>
+      <input type="date" id="dateDeNaissance" [(ngModel)]="dateDeNaissance">
+    </p>
+    <div>
+      <button (click)="creationDeCompte()">Créer un compte</button>
+    </div>
+  </div>
+
+  <div *ngIf="afficherDashboard">
+    <h3>Tableau de bord</h3>
+    <p>Numéro de compte : {{numeroDeCompte}}</p>
+    <hr>
+    <p>Nom : {{nom}}</p>
+    <p>Prénom(s) : {{prenom}}</p>
+    <p>Date de naissance : {{dateDeNaissance}}</p>
+
+    <h4>Solde total des comptes : {{solde}}</h4>
+    <p>
+      <button (click)="isDecouverte()">Droit de découverte</button>
+    </p>
+    <br/>
+    <div>
+      <button (click)="versement()">Faire un versement</button>
+    </div>
+    <div>
+      <button (click)="virement()">Faire un virement</button>
+    </div>
+    <div>
+      <button (click)="retrait()">Faire un retrait</button>
+    </div>
+  </div>
+
+  <div>
+
+    <div *ngIf="afficherVersement">
+      <h3>Nouvelle Opération</h3>
+      <h4>Versement</h4>
+      <p>
+        <label for="montantDeVersement">Montant à verser :</label>
+        <input type="number" id="montantDeVersement" [(ngModel)]="montantAVerser">
+      </p>
+      <p>
+        <button (click)="apresVersement()">Valider</button>
+      </p>
+
+    </div>
+    <div *ngIf="afficherVirement">
+      <h3>Nouvelle Opération</h3>
+      <h4>Virement</h4>
+      <p>
+        <label for="montantAVirer">Montant à virer :</label>
+        <input type="number" id="montantAVirer" [(ngModel)]="montantAVirer">
+      </p>
+      <p>
+        <button (click)="apresVirement()">Valider</button>
+      </p>
+
+    </div>
+    <div *ngIf="afficherRetrait">
+      <h3>Nouvelle Opération</h3>
+      <h4>Retrait</h4>
+      <p>
+        <label for="montantDeRetrait">Montant à Tirer</label>
+        <input type="number" id="montantDeRetrait" [(ngModel)]="montantATirer">
+      </p>
+      <p>
+        <button (click)="apresRetrait()">Valider</button>
+      </p>
+    </div>
+
+
+  </div>
+
+
+</div>

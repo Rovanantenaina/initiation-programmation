@@ -1,0 +1,23 @@
+<div>
+  <h3>Géometrie</h3>
+  <p>
+    <label for="longueur">Longueur :</label>
+    <input type="number" [(ngModel)]="longueur" id="longueur">
+
+  </p>
+  <p>
+    <label for="largeur">Largeur : </label>
+    <input type="number" [(ngModel)]="largeur" id="largeur">
+  </p>
+</div>
+
+<div>
+  <button (click)="setPerimetre()">Calculer le périmètre</button>
+  <p>==> {{perimetre}}</p>
+</div>
+
+<div>
+  <button (click)="getSurface()">Calculer la surface</button>
+  <p>==> {{surface}}</p>
+
+</div>

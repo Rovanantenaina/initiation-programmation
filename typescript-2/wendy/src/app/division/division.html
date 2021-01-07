@@ -1,0 +1,22 @@
+<div>
+  <h3>Division</h3>
+
+  <p>
+    <label for="dividende">Dividende :</label>
+    <input type="number" id="dividende" [(ngModel)]="dividende">
+  </p>
+
+  <p>
+    <label for="diviseur">Diviseur :</label>
+    <input type="number"  id="diviseur" [(ngModel)]="diviseur">
+  </p>
+</div>
+
+<div>
+  <button (click)="getCalcul()">Calculer</button>
+  <p>
+    Quotient<strong> ==> {{quotient}}</strong>
+  </p>
+
+
+</div>
