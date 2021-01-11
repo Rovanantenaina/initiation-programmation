@@ -17,7 +17,8 @@ export class LancerBanque {
   public montantAVerser: number;
   public montantAVirer: number;
   public montantATirer: number;
-  public droitDeDecouverte : number = 1000;
+  public droitDeDecouverte : number;
+
 
   public afficherCreationDeCompte : boolean = true;
   public afficherDashboard : boolean = false;
@@ -28,6 +29,7 @@ export class LancerBanque {
 
   public creationDeCompte () : void {
     this.solde = 10;
+    this.droitDeDecouverte = 1000;
     this.numeroDeCompte = "XXXXXX123"
 
     this.afficherDashboard = true;
@@ -49,34 +51,31 @@ export class LancerBanque {
   }
 
   public virement () : void {
-
-
     this.afficherDashboard = false;
     this.afficherVirement = true;
   }
 
   public apresVirement () : void {
-    this.solde = this.solde - this.montantAVirer;
     this.afficherVirement = false;
     this.afficherDashboard = true;
+    if (this.solde < this.montantAVirer) {
+      this.droitDeDecouverte = this.droitDeDecouverte - this.montantAVirer
+    } else { this.solde = this.solde - this.montantAVirer}
+
   }
   public retrait () : void {
-
-
     this.afficherDashboard = false;
     this.afficherRetrait = true;
   }
 
   public apresRetrait () : void {
-    this.solde = this.solde - this.montantATirer;
+    if (this.solde < this.montantATirer) {
+      this.droitDeDecouverte = this.droitDeDecouverte - this.montantATirer
+    } else { this.solde = this.solde - this.montantATirer}
     this.afficherRetrait = false;
     this.afficherDashboard = true;
   }
 
-  public isDecouverte () : void {
-    this.solde >= 0;
-    this.solde = this.droitDeDecouverte;
-  }
 
 
 
