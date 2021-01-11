@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Deploy Angular
 
 on:
   push:
@@ -11,6 +11,7 @@ on:
 
 jobs:
   build:
+    name: eras-deploy
 
     runs-on: ubuntu-latest
 
@@ -20,12 +21,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-      working-directory: ./typescript-2/wendy
-    - run: npm run run-prod
-      working-directory: ./typescript-2/wendy
+      - uses: actions/checkout@v2
+      - name: Angular Deploy gh-pages Actions
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+
+        with:
+          angular_project_dir: ./typescript-2/wendy
+          github_access_token: ${{ secrets.ACCESS_TOKEN_ADMIN }} # see the Configuration section for how you can create secrets
+          build_configuration: production # The build environment for the app. please look configurations in your angular.json
+          base_href: /initiation-programmation/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+          deploy_branch: gh-pages # The branch the action should deploy to.
+          angular_dist_build_folder: dist/wendy # The folder where your project is supposed to be after running ng build by the action.
