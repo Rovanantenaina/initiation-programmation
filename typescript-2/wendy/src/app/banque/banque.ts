@@ -28,6 +28,8 @@ export class LancerBanque {
   public afficherVersement: boolean = false;
   public afficherVirement: boolean = false;
   public afficherRetrait: boolean = false;
+  public afficherVirementRefuse: boolean = false;
+  public afficherRetraitRefuse: boolean = false;
 
 
   public creationDeCompte(): void {
@@ -42,7 +44,6 @@ export class LancerBanque {
 
   public versement(): void {
     this.afficherDashboard = false;
-
     this.afficherVersement = true;
   }
 
@@ -51,6 +52,8 @@ export class LancerBanque {
     this.solde = this.solde + this.montantAVerser;
     this.afficherVersement = false;
     this.afficherDashboard = true;
+    this.afficherVirementRefuse = false;
+    this.afficherRetraitRefuse = false;
   }
 
   public virement(): void {
@@ -61,13 +64,24 @@ export class LancerBanque {
   public apresVirement(): void {
     this.afficherVirement = false;
     this.afficherDashboard = true;
-    if (this.montantAVirer < (this.solde + this.droitDeDecouverte)) {
+    this.afficherRetraitRefuse = false;
+    this.afficherVirementRefuse = false;
 
-      this.solde = this.solde - this.montantAVirer;
+
+    this.solde = this.solde - this.montantAVirer;
+
+  }
+
+  public echecVirement(): void {
+    this.afficherVirement = false;
+    this.afficherDashboard = true;
+    this.afficherVirementRefuse = true;
+
+    if (this.montantAVirer > (this.solde + this.droitDeDecouverte)) {
+      this.erreurVirement = "Virement refusé, manque de provision sur votre compte."
     } else {
-      this.erreurVirement = "Virement refusé";
+      this.solde = this.solde - this.montantAVirer;
     }
-
   }
 
   public retrait(): void {
@@ -79,13 +93,21 @@ export class LancerBanque {
 
     this.afficherRetrait = false;
     this.afficherDashboard = true;
+    this.afficherVirementRefuse = false;
+    this.afficherRetraitRefuse = false;
 
-    if (this.montantATirer < (this.solde + this.droitDeDecouverte)) {
+    this.solde = this.solde - this.montantATirer;
+  }
 
+  public echecRetrait () : void {
+    this.afficherRetrait = false;
+    this.afficherDashboard = true;
+    this.afficherRetraitRefuse = true;
+
+    if (this.montantATirer > (this.solde + this.droitDeDecouverte)) {
+      this.erreurRetrait = "Retrait refusé, manque de provision sur votre compte."
+    } else  {
       this.solde = this.solde - this.montantATirer;
-
-    } else {
-      this.erreurRetrait = "Retrait refusé"
     }
   }
 }

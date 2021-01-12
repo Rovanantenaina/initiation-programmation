@@ -29,9 +29,9 @@
 
     <h4>Solde total des comptes : {{solde}}</h4>
     <p>Droit de découverte : {{droitDeDecouverte}}</p>
-    <p style="color: red">{{erreurVirement}}</p>
-    <p style="color: red">{{erreurRetrait}}</p>
     <br/>
+    <p style="color: red" *ngIf="afficherVirementRefuse">{{erreurVirement}}</p>
+    <p style="color: red" *ngIf="afficherRetraitRefuse">{{erreurRetrait}}</p>
     <div>
       <button (click)="versement()">Faire un versement</button>
     </div>
@@ -42,7 +42,6 @@
       <button (click)="retrait()">Faire un retrait</button>
     </div>
   </div>
-
   <div>
 
     <div *ngIf="afficherVersement">
@@ -66,7 +65,7 @@
         <input type="number" id="montantAVirer" [(ngModel)]="montantAVirer">
       </p>
       <p>
-        <button (click)="apresVirement()">Valider</button>
+        <button (click)="apresVirement();echecVirement()">Valider</button>
       </p>
 
     </div>
@@ -79,7 +78,7 @@
         <input type="number" id="montantDeRetrait" [(ngModel)]="montantATirer">
       </p>
       <p>
-        <button (click)="apresRetrait()">Valider</button>
+        <button (click)="apresRetrait();echecRetrait()">Valider</button>
       </p>
     </div>
 
