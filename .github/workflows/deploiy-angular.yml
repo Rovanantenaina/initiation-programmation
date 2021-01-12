@@ -5,7 +5,7 @@ name: Deploy Angular
 
 on:
   push:
-    branches: [feat/build-ci]
+    branches: [feat/build-ci, main]
   pull_request:
     branches: [ main ]
 
