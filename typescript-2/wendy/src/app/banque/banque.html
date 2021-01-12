@@ -29,7 +29,8 @@
 
     <h4>Solde total des comptes : {{solde}}</h4>
     <p>Droit de découverte : {{droitDeDecouverte}}</p>
-
+    <p style="color: red">{{erreurVirement}}</p>
+    <p style="color: red">{{erreurRetrait}}</p>
     <br/>
     <div>
       <button (click)="versement()">Faire un versement</button>
@@ -55,6 +56,7 @@
         <button (click)="apresVersement()">Valider</button>
       </p>
 
+
     </div>
     <div *ngIf="afficherVirement">
       <h3>Nouvelle Opération</h3>
@@ -68,6 +70,7 @@
       </p>
 
     </div>
+
     <div *ngIf="afficherRetrait">
       <h3>Nouvelle Opération</h3>
       <h4>Retrait</h4>

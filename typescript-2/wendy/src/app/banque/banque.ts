@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {error} from "@angular/compiler/src/util";
 
 @Component({
   selector: "banque",
@@ -17,68 +18,75 @@ export class LancerBanque {
   public montantAVerser: number;
   public montantAVirer: number;
   public montantATirer: number;
-  public droitDeDecouverte : number;
+  public droitDeDecouverte: number;
+  public erreurVirement: string;
+  public erreurRetrait: string;
 
 
-  public afficherCreationDeCompte : boolean = true;
-  public afficherDashboard : boolean = false;
-  public afficherVersement : boolean = false;
-  public afficherVirement : boolean = false;
-  public afficherRetrait : boolean = false;
+  public afficherCreationDeCompte: boolean = true;
+  public afficherDashboard: boolean = false;
+  public afficherVersement: boolean = false;
+  public afficherVirement: boolean = false;
+  public afficherRetrait: boolean = false;
 
 
-  public creationDeCompte () : void {
+  public creationDeCompte(): void {
     this.solde = 10;
     this.droitDeDecouverte = 1000;
-    this.numeroDeCompte = "XXXXXX123"
+    this.numeroDeCompte = "XXXXXX123";
 
     this.afficherDashboard = true;
     this.afficherCreationDeCompte = false;
   }
 
 
-  public versement () : void {
+  public versement(): void {
     this.afficherDashboard = false;
 
     this.afficherVersement = true;
   }
 
 
-  public apresVersement () : void {
+  public apresVersement(): void {
     this.solde = this.solde + this.montantAVerser;
     this.afficherVersement = false;
     this.afficherDashboard = true;
   }
 
-  public virement () : void {
+  public virement(): void {
     this.afficherDashboard = false;
     this.afficherVirement = true;
   }
 
-  public apresVirement () : void {
+  public apresVirement(): void {
     this.afficherVirement = false;
     this.afficherDashboard = true;
-    if (this.solde < this.montantAVirer) {
-      this.droitDeDecouverte = this.droitDeDecouverte - this.montantAVirer
-    } else { this.solde = this.solde - this.montantAVirer}
+    if (this.montantAVirer < (this.solde + this.droitDeDecouverte)) {
+
+      this.solde = this.solde - this.montantAVirer;
+    } else {
+      this.erreurVirement = "Virement refusé";
+    }
 
   }
-  public retrait () : void {
+
+  public retrait(): void {
     this.afficherDashboard = false;
     this.afficherRetrait = true;
   }
 
-  public apresRetrait () : void {
-    if (this.solde < this.montantATirer) {
-      this.droitDeDecouverte = this.droitDeDecouverte - this.montantATirer
-    } else { this.solde = this.solde - this.montantATirer}
+  public apresRetrait(): void {
+
     this.afficherRetrait = false;
     this.afficherDashboard = true;
+
+    if (this.montantATirer < (this.solde + this.droitDeDecouverte)) {
+
+      this.solde = this.solde - this.montantATirer;
+
+    } else {
+      this.erreurRetrait = "Retrait refusé"
+    }
   }
-
-
-
-
-
 }
 
