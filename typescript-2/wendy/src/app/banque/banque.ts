@@ -3,7 +3,8 @@ import {error} from "@angular/compiler/src/util";
 
 @Component({
   selector: "banque",
-  templateUrl: "banque.html"
+  templateUrl: "banque.html",
+  styleUrls : ["banque.css"]
 })
 
 

@@ -1,26 +1,26 @@
 <div>
-  <h1>Banque-wa</h1>
-  <div *ngIf="afficherCreationDeCompte">
+  <h1 class="centre">Banque-wa</h1>
+  <div class="corps" *ngIf="afficherCreationDeCompte">
     <h3>Création d'un compte</h3>
     <p>
       <label for="nom">Nom :</label>
-      <input type="text" id="nom" [(ngModel)]="nom">
+      <input type="text" id="nom" class="border" [(ngModel)]="nom">
     </p>
     <p>
       <label for="prenom">Prénom(s) :</label>
-      <input type="text" id="prenom" [(ngModel)]="prenom">
+      <input type="text" id="prenom"  class="border"  [(ngModel)]="prenom">
     </p>
     <p>
       <label for="dateDeNaissance">Date de naissance :</label>
-      <input type="date" id="dateDeNaissance" [(ngModel)]="dateDeNaissance">
+      <input type="date" id="dateDeNaissance"   class="border" [(ngModel)]="dateDeNaissance">
     </p>
     <div>
-      <button (click)="creationDeCompte()">Créer un compte</button>
+      <button  class="border"  (click)="creationDeCompte()">Créer un compte</button>
     </div>
   </div>
 
-  <div *ngIf="afficherDashboard">
-    <h3>Tableau de bord</h3>
+  <div class="corps" *ngIf="afficherDashboard">
+    <h3 class="centre">Tableau de bord</h3>
     <p>Numéro de compte : {{numeroDeCompte}}</p>
     <hr>
     <p>Nom : {{nom}}</p>
@@ -33,52 +33,52 @@
     <p style="color: red" *ngIf="afficherVirementRefuse">{{erreurVirement}}</p>
     <p style="color: red" *ngIf="afficherRetraitRefuse">{{erreurRetrait}}</p>
     <div>
-      <button (click)="versement()">Faire un versement</button>
+      <button  class="border"  (click)="versement()">Faire un versement</button>
     </div>
     <div>
-      <button (click)="virement()">Faire un virement</button>
+      <button  class="border"  (click)="virement()">Faire un virement</button>
     </div>
     <div>
-      <button (click)="retrait()">Faire un retrait</button>
+      <button  class="border"  (click)="retrait()">Faire un retrait</button>
     </div>
   </div>
   <div>
 
-    <div *ngIf="afficherVersement">
-      <h3>Nouvelle Opération</h3>
+    <div class="corps" *ngIf="afficherVersement">
+      <h3 class="centre">Nouvelle Opération</h3>
       <h4>Versement</h4>
       <p>
         <label for="montantDeVersement">Montant à verser :</label>
-        <input type="number" id="montantDeVersement" [(ngModel)]="montantAVerser">
+        <input type="number" id="montantDeVersement"  class="border" [(ngModel)]="montantAVerser">
       </p>
       <p>
-        <button (click)="apresVersement()">Valider</button>
+        <button  class="border"  (click)="apresVersement()">Valider</button>
       </p>
 
 
     </div>
-    <div *ngIf="afficherVirement">
-      <h3>Nouvelle Opération</h3>
+    <div class="corps" *ngIf="afficherVirement">
+      <h3 class="centre">Nouvelle Opération</h3>
       <h4>Virement</h4>
       <p>
         <label for="montantAVirer">Montant à virer :</label>
-        <input type="number" id="montantAVirer" [(ngModel)]="montantAVirer">
+        <input type="number" id="montantAVirer"  class="border" [(ngModel)]="montantAVirer">
       </p>
       <p>
-        <button (click)="apresVirement();echecVirement()">Valider</button>
+        <button  class="border"  (click)="apresVirement();echecVirement()">Valider</button>
       </p>
 
     </div>
 
-    <div *ngIf="afficherRetrait">
-      <h3>Nouvelle Opération</h3>
+    <div class="corps" *ngIf="afficherRetrait">
+      <h3 class="centre">Nouvelle Opération</h3>
       <h4>Retrait</h4>
       <p>
         <label for="montantDeRetrait">Montant à Tirer</label>
-        <input type="number" id="montantDeRetrait" [(ngModel)]="montantATirer">
+        <input type="number" id="montantDeRetrait"  class="border" [(ngModel)]="montantATirer">
       </p>
       <p>
-        <button (click)="apresRetrait();echecRetrait()">Valider</button>
+        <button  class="border"  (click)="apresRetrait();echecRetrait()">Valider</button>
       </p>
     </div>
 
