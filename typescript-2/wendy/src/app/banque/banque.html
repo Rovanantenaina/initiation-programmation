@@ -33,13 +33,9 @@
     <p style="color: red" *ngIf="afficherVirementRefuse">{{erreurVirement}}</p>
     <p style="color: red" *ngIf="afficherRetraitRefuse">{{erreurRetrait}}</p>
     <div>
-      <button  class="border"  (click)="versement()">Faire un versement</button>
-    </div>
-    <div>
-      <button  class="border"  (click)="virement()">Faire un virement</button>
-    </div>
-    <div>
-      <button  class="border"  (click)="retrait()">Faire un retrait</button>
+      <button  class="border" id="bouton1"  (click)="versement()">Faire un versement</button>
+      <button  class="border" id="bouton2" (click)="virement()">Faire un virement</button>
+      <button  class="border" id="bouton3"  (click)="retrait()">Faire un retrait</button>
     </div>
   </div>
   <div>
