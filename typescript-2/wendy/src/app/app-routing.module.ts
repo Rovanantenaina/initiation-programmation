@@ -12,6 +12,8 @@ import {Geometrie} from "./geometrie/geometrie";
 import {Moyenne} from "./moyenne/moyenne";
 import {PlusDeux} from "./plus-deux/plus-deux";
 import {LancerBanque} from "./banque/banque";
+import {ArraySkills} from "./array-skills/array-skills";
+import {Devise} from "./devise/devise";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -26,7 +28,9 @@ import {LancerBanque} from "./banque/banque";
     {path: "geometrie", component: Geometrie},
     {path: "moyenne", component: Moyenne},
     {path: "plusDeux", component : PlusDeux},
-    {path: "lancerBanque", component : LancerBanque}
+    {path: "lancerBanque", component : LancerBanque},
+    {path: "array-skills", component : ArraySkills},
+    {path: "devise", component : Devise}
   ])],
   exports: [RouterModule]
 })

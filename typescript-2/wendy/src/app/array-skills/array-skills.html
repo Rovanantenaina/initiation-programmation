@@ -1,0 +1,43 @@
+<div>
+  <h4>Liste des noms</h4>
+  <ul>
+    <li>{{listeNom[0]}}</li>
+    <li>{{listeNom[1]}}</li>
+    <li>{{listeNom[3]}}</li>
+    <li>{{listeNom[2]}}</li>
+    <li>{{listeNom[4]}}</li>
+  </ul>
+
+  <table>
+    <thead>
+    <tr>
+      <td>Premier</td>
+      <td>Deuxième</td>
+    </tr>
+    </thead>
+    <tr>
+      <td>{{listeAge[1]}}</td>
+      <td>{{listeAge[3]}}</td>
+    </tr>
+  </table>
+
+
+  <hr>
+
+  <div>
+    <h2>Liste des Akizy</h2>
+    <label for="akizy">Saifidy manadala be : </label>
+    <select id="akizy" [(ngModel)]="akizy">
+      <option></option>
+      <option value="{{'bekopaka'}}">numver 1 :  - {{listeAkizy[0]}}</option>
+      <option value="{{listeAkizy[2]}}">numver 2 :  - {{listeAkizy[2]}}</option>
+      <option value="{{listeAkizy[4]}}">numver 3 :  - {{listeAkizy[4]}}</option>
+      <option value="{{listeAkizy[3]}}">numver 4 :  - {{listeAkizy[3]}}</option>
+    </select>
+  </div>
+
+  <div style="background-color: aqua; width: 100%">
+    <em>{{akizy}}</em>
+  </div>
+
+</div>

@@ -16,6 +16,8 @@ import {Geometrie} from "./geometrie/geometrie";
 import {Moyenne} from "./moyenne/moyenne";
 import {PlusDeux} from "./plus-deux/plus-deux";
 import {LancerBanque} from "./banque/banque";
+import {ArraySkills} from "./array-skills/array-skills";
+import {Devise} from "./devise/devise";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {LancerBanque} from "./banque/banque";
     Geometrie,
     Moyenne,
     PlusDeux,
-    LancerBanque
+    LancerBanque,
+    ArraySkills,
+    Devise
 
   ],
   imports: [
