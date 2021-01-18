@@ -15,6 +15,7 @@ import {LancerBanque} from "./banque/banque";
 import {ArraySkills} from "./array-skills/array-skills";
 import {Devise} from "./devise/devise";
 
+
 @NgModule({
   imports: [RouterModule.forRoot([
     {path: "home", component: Exercice},
