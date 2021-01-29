@@ -1,0 +1,21 @@
+.colore {
+    background-color: #a8a8a8;
+}
+#main {
+    border-collapse: collapse;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+
+}
+
+#main td {
+    border: solid black 1px;
+    padding-left: 10px;
+}
+.text-droit {
+    text-align: right;
+}
+#footer {
+    padding-bottom: 15px;
+}
